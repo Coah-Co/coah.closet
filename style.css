@@ -1,0 +1,162 @@
+body, html {
+    height: 100%;
+    background-color:#F0EBE3 ;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.hero-image {
+    position: relative;
+    height: 100%;
+  }
+  
+  .background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("stockImages/testlogo.jpg");
+    height: 93%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+    
+    background-size: cover;
+    border: 3px solid #7D9D9C;
+    filter: blur(3px); /* Blur only this layer */
+    background-attachment: fixed;
+    transform: scale(1.1);
+  }
+
+  .background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 100%);
+  }
+  
+
+  
+  
+  #hero {
+      position: relative; /* Ensure it stays above the blurred layer */
+      z-index: 2; /* Higher z-index to appear on top */
+      background-color: rgba(0,0,0,0.4); /* Black overlay for contrast */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #7D9D9C;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+  }
+  
+  #est{
+    z-index: 3;
+    text-align: center;
+    top: 50%;
+    position: relative;
+    color: #333;
+    font-weight: bold;
+  }
+
+  #hero button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  #hero button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+  }
+
+    
+  #social-icons {
+    position: absolute;
+    bottom: 35px;
+    right: 20px;
+    z-index: 3;
+  }
+  
+  #social-icons a {
+    color: white;
+    font-size: 24px;
+    margin-left: 10px;
+    z-index: 3;
+  }  
+  
+#igLogo i {
+    transition: transform 0.3s ease;
+    /* display: inline-block; This ensures the transform works on inline elements */
+}
+
+#igLogo:hover i {
+    transform: scale(1.5);
+}
+
+  
+  @media (max-width: 768px) {
+
+    body, html {
+        height: 100%;
+        background-color:#F0EBE3 ;
+    }
+
+    
+
+    #hero {
+      width: 90%;
+    }
+    
+    #hero h1 {
+      font-size: 24px;
+    }
+
+    .background {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("stockImages/testlogo.jpg");
+        height: 93%;
+        width: 100%;
+        position: absolute;
+        top: -12px;
+        left: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% 90%;
+        
+
+        
+        
+        
+        
+        border: 3px solid #7D9D9C;
+        filter: blur(3px); /* Blur only this layer */
+        background-attachment: fixed;
+        transform: scale(1.05);
+        transition: background-size 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }
+
+      #social-icons {
+        position: absolute;
+        bottom: 65px;
+        right: 20px;
+        z-index: 3;
+      }
+      
+      #social-icons a {
+        color: white;
+        font-size: 24px;
+        margin-left: 100px;
+        z-index: 3;
+      }  
+  }
+  
