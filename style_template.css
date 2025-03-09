@@ -20,6 +20,8 @@ html , body{
     bottom: 400px;
     left: 0;
     right: 0;
+    z-index: -1;
+
 
 }
 
@@ -106,6 +108,11 @@ form button:hover {
     color: black;
     
   }
+
+  .topnav a.active:hover {
+  background-color: #576F72; /* A darker shade for active hover */
+  color: white;
+}
 
     /* Hide the link that should open and close the topnav on small screens */
     .topnav .icon {
@@ -200,6 +207,7 @@ form button:hover {
             bottom: 250px;
             left: 0;
             right: 0;
+            z-index: -1;
         }
     }
 
